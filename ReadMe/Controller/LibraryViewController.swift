@@ -28,6 +28,11 @@ class LibraryViewController: UITableViewController {
         return cell 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      tableView.reloadData()
+    }
+    
     @IBSegueAction func showDetailView(_ coder: NSCoder) -> UIViewController? {
         guard let indexPath = tableView.indexPathForSelectedRow else {
             fatalError("Nothing selected")
