@@ -21,10 +21,14 @@ class LibraryViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath) as? BookCellTableViewCell else {
+            fatalError("could not create bookcell")
+        }
         let book = Library.books[indexPath.row]
-        cell.textLabel?.text = book.title
-        cell.imageView?.image = book.image
+        cell.titleLabel.text = book.title
+        cell.authorLabel.text = book.author
+        cell.bookThumbnail.image = book.image
+        cell.bookThumbnail.layer.cornerRadius = 12
         return cell 
     }
     

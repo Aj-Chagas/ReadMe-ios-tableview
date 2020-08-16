@@ -16,6 +16,7 @@
 		B477652124E895E900EA5AF4 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = B477652024E895E900EA5AF4 /* Book.swift */; };
 		B477652324E89B0800EA5AF4 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = B477652224E89B0800EA5AF4 /* Library.swift */; };
 		B477652524E8AC9900EA5AF4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B477652424E8AC9900EA5AF4 /* DetailViewController.swift */; };
+		B477652A24E984F700EA5AF4 /* BookCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B477652924E984F700EA5AF4 /* BookCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B477652024E895E900EA5AF4 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		B477652224E89B0800EA5AF4 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		B477652424E8AC9900EA5AF4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B477652924E984F700EA5AF4 /* BookCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				B477651024E882EA00EA5AF4 /* LibraryViewController.swift */,
 				B477652424E8AC9900EA5AF4 /* DetailViewController.swift */,
+				B477652924E984F700EA5AF4 /* BookCellTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			files = (
 				B477652124E895E900EA5AF4 /* Book.swift in Sources */,
 				B477651124E882EA00EA5AF4 /* LibraryViewController.swift in Sources */,
+				B477652A24E984F700EA5AF4 /* BookCellTableViewCell.swift in Sources */,
 				B477652324E89B0800EA5AF4 /* Library.swift in Sources */,
 				B477652524E8AC9900EA5AF4 /* DetailViewController.swift in Sources */,
 				B477650D24E882EA00EA5AF4 /* AppDelegate.swift in Sources */,
