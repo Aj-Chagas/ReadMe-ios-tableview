@@ -27,5 +27,13 @@ class LibraryViewController: UITableViewController {
         cell.imageView?.image = book.image
         return cell 
     }
+    
+    @IBSegueAction func showDetailView(_ coder: NSCoder) -> UIViewController? {
+        guard let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("Nothing selected")
+        }
+        let book = Library.books[indexPath.row]
+        return DetailViewController(coder: coder, book: book)
+    }
 }
 
