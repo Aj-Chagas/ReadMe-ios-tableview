@@ -266,6 +266,7 @@
                     <connections>
                         <outlet property="authorLabel" destination="0Ul-Pk-Fg1" id="SNy-Ky-Kss"/>
                         <outlet property="imageView" destination="ffV-Pd-pWp" id="u4n-wy-bEp"/>
+                        <outlet property="reviewTextView" destination="pTf-9f-C6J" id="WHz-Yo-sqi"/>
                         <outlet property="titleLabel" destination="S8Z-xj-V4s" id="J5d-Cw-r3K"/>
                     </connections>
                 </tableViewController>

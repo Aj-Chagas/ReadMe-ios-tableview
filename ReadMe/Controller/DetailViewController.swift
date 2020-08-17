@@ -15,6 +15,7 @@ class DetailViewController: UITableViewController {
     @IBOutlet var titleLabel : UILabel!
     @IBOutlet var authorLabel : UILabel!
     @IBOutlet var imageView : UIImageView!
+    @IBOutlet var reviewTextView : UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,10 @@ class DetailViewController: UITableViewController {
         authorLabel.text = book.author
         imageView.image = book.image
         imageView.layer.cornerRadius = 12
+        if let review = book.review {
+            reviewTextView.text = review
+        }
+        reviewTextView.addDoneButton()
     }
     
     required init?(coder: NSCoder) {
@@ -52,4 +57,21 @@ extension DetailViewController: UIImagePickerControllerDelegate, UINavigationCon
     Library.saveImage(selectedImage, forBook: book)
     dismiss(animated: true)
   }
+}
+
+extension DetailViewController : UITextViewDelegate {
+    func textViewDidEndEditing(_ textView: UITextView) {
+        textView.resignFirstResponder()
+    }
+}
+
+extension UITextView {
+    func  addDoneButton() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.resignFirstResponder))
+        toolbar.items = [flexSpace, doneButton]
+        self.inputAccessoryView = toolbar
+    }
 }
